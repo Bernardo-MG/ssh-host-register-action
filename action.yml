@@ -1,0 +1,13 @@
+name: 'SSH Host Register'
+description: 'Register a host into the SSH known hosts'
+auth0r: 'Bernardo Martínez Garrido'
+inputs:
+  host:
+    description: 'Host to register.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'external-link'  
+  color: 'green'
