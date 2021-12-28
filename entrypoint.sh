@@ -6,8 +6,8 @@ set -e
 settings_path="site_settings.xml"
 
 # Install dependencies
-apt update;
-apt install ssh;
+apk update;
+apk add ssh;
 
 # Makes sure the SSH folder exists
 mkdir -p ~/.ssh/;
