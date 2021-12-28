@@ -5,6 +5,8 @@ set -e
 
 host=${1}
 
+echo ${host};
+
 # Install dependencies
 apk update;
 apk add openssh;
