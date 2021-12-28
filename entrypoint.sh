@@ -7,7 +7,7 @@ settings_path="site_settings.xml"
 
 # Install dependencies
 apk update;
-apk add ssh;
+apk add openssh;
 
 # Makes sure the SSH folder exists
 mkdir -p ~/.ssh/;
