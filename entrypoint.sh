@@ -3,6 +3,8 @@
 # Fails if any commands returns a non-zero value
 set -e
 
+host=${1}
+
 # Install dependencies
 apk update;
 apk add openssh;
@@ -11,6 +13,6 @@ apk add openssh;
 mkdir -p ~/.ssh/;
 
 # Registers host
-ssh-keyscan -H ${inputs.host} >> ~/.ssh/known_hosts;
+ssh-keyscan -H ${host} >> ~/.ssh/known_hosts;
 
 exit 0
