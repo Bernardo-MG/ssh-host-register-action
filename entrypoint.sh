@@ -6,8 +6,8 @@ set -e
 settings_path="site_settings.xml"
 
 # Install dependencies
-apt-get -yq update;
-apt-get -yqq install ssh;
+apt update;
+apt install ssh;
 
 # Makes sure the SSH folder exists
 mkdir -p ~/.ssh/;
