@@ -12,3 +12,4 @@ mkdir -p ~/.ssh/;
 ssh-keyscan -H ${host} >> ~/.ssh/known_hosts;
 
 exit 0
+ 
