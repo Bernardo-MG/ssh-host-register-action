@@ -9,5 +9,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
 branding:
-  icon: 'external-link'  
+  icon: 'external-link'
   color: 'green'

@@ -3,7 +3,7 @@
 # Fails if any commands returns a non-zero value
 set -e
 
-settings_path="site_settings.xml"
+host=${1}
 
 # Install dependencies
 apk update;
