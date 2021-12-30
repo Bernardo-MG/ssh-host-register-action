@@ -3,7 +3,11 @@
 # Fails if any commands returns a non-zero value
 set -e
 
-settings_path="site_settings.xml"
+host=${1}
+
+# Install dependencies
+apk update;
+apk add openssh;
 
 # Makes sure the SSH folder exists
 mkdir -p ~/.ssh/;

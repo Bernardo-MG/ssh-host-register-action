@@ -8,6 +8,8 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.host }}
 branding:
-  icon: 'external-link'  
+  icon: 'external-link'
   color: 'green'
