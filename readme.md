@@ -1,9 +1,23 @@
 # SSH Host Register Action
 
-Registers a host into the SSH known hosts.
+Registers a host into the SSH known hosts. Useful as a previous step to connecting through SSH and deploying artifacts.
+
+## Inputs
+
+| Input | Description       | Required |
+|-------|-------------------|----------|
+| host  | Host to register. | True     |
 
 ## Usage
 
+
+```
+steps:
+- name: Register SSH host
+  uses: bernardo-mg/ssh-host-register-action@v1
+  with:
+    host: ${{ secrets.HOST }
+```
 
 ## Collaborate
 
