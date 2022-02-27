@@ -5,10 +5,6 @@ set -e
 
 host=${1}
 
-# Install dependencies
-apk update;
-apk add openssh;
-
 # Makes sure the SSH folder exists
 mkdir -p ~/.ssh/;
 
