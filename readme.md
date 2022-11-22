@@ -10,13 +10,19 @@ Registers a host into the SSH known hosts. Useful as a previous step to connecti
 
 ## Usage
 
+This registers a host into the known hosts.
 
 ```
-steps:
-- name: Register SSH host
-  uses: bernardo-mg/ssh-host-register-action@v1
-  with:
-    host: ${{ secrets.HOST }
+jobs:
+  setup:
+    name: Preparation
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Register SSH host
+      uses: bernardo-mg/ssh-host-register-action@v1
+      with:
+        host: ${{ secrets.host }}
 ```
 
 ## Collaborate
