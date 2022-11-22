@@ -1,12 +1,20 @@
-# Container image that runs your code
+# -----------------------------------------------------------------------------
+# ACTION IMAGE
+#
+# A simple image which just copies and runs the action script.
+# -----------------------------------------------------------------------------
+# Build a lightweight environment
 FROM alpine:3.16
 
 # Install dependencies
 RUN apk update;
 RUN apk add openssh;
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
+# Copy script
 COPY entrypoint.sh /entrypoint.sh
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
+# Increase permissions
+RUN chmod +x /entrypoint.sh
+
+# Run script on start
 ENTRYPOINT ["/entrypoint.sh"]
