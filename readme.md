@@ -12,7 +12,7 @@ Registers a host into the SSH known hosts. Useful as a previous step to connecti
 
 This registers a host into the known hosts.
 
-```
+```yaml
 jobs:
   setup:
     name: Preparation
